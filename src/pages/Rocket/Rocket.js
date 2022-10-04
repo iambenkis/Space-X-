@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Rocket = () => {
-    return (
-        <>
-        </>
-    );
-}
+const Rocket = () => (
+  <>
+    <p>Rocket Page</p>
+  </>
+);
 
 export default Rocket;

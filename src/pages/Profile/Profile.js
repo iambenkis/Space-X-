@@ -1,5 +1,9 @@
 import React from 'react';
 
-const Profile = () => <></>;
+const Profile = () => (
+  <>
+    <p>Profile Page</p>
+  </>
+);
 
 export default Profile;
