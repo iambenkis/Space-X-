@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: 0.75rem 2rem;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -13,22 +14,27 @@
   font-weight: bold;
   gap: 1rem;
 }
+
 .logo-image {
   display: inline-block;
   width: 8rem;
 }
-.nav, .unorderList {
+
+.nav,
+.unorderList {
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
-  gap: 1.6rem
+  gap: 1.6rem;
 }
+
 .list .link {
   text-decoration: none;
   color: black;
   font-size: 1.75rem;
 }
+
 .link.active {
   color: blue;
   text-decoration: underline;
