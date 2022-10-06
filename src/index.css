@@ -78,3 +78,8 @@ body {
   padding: .3rem;
   border-radius: 7px;
 }
+
+.rocket span {
+  background-color: #0290ff;
+  border-radius: 5px;
+}

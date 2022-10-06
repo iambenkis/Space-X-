@@ -25,9 +25,16 @@ return (
           <img src={m.image}/>
           <div className='rocket-text'>
             <h2>{m.name}</h2>
-            <span>{m.reserved?"Reserved":"bejjk"}</span>
-            <p>{m.description}</p>
-            <button type='button' >Reserve Rocket</button>
+            <p>
+              <span>{m.reserved?"Reserved":''}</span>
+              {m.description}
+            </p>
+            {
+              !m.reserved?
+              <button type='button' className='reserve'>Reserve Rocket</button>:
+              <button type='button' className='cancel'>Cancel Reservation</button>
+            }
+
           </div>
         </div>
     )

@@ -45,4 +45,6 @@ export const reservePlace = (rockets) => ({
     return rockets;
   });
 
+  // export const reservedRocket =
+
   export default rocketsReducer;
