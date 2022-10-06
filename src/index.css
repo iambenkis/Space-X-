@@ -14,6 +14,21 @@ html {
 body {
   width: 100%;
   min-height: 100%;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #efefef;
 }
 
 .rockets {
@@ -25,4 +40,41 @@ body {
 
 .rocket {
   display: flex;
+  margin: 2rem 10%;
+}
+
+.rocket .rocket-text {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.rocket-text h2 {
+  margin-bottom: 1rem;
+}
+
+.rocket-text p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.rocket-text button {
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
+  padding: 1rem 1.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rocket-text button:hover {
+  background-color: #0472c7;
+}
+
+.rocket img {
+  width: 27rem;
+  height: 20rem;
+  border: 1px solid rgb(173, 173, 173);
+  padding: .3rem;
+  border-radius: 7px;
 }

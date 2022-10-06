@@ -25,8 +25,9 @@ return (
           <img src={m.image}/>
           <div className='rocket-text'>
             <h2>{m.name}</h2>
+            <span>{m.reserved?"Reserved":"bejjk"}</span>
             <p>{m.description}</p>
-            <button type='button' >RESERVE</button>
+            <button type='button' >Reserve Rocket</button>
           </div>
         </div>
     )
