@@ -22,10 +22,13 @@ export const reservePlace = (index) => ({
   const rocketsReducer = (state = initialState, action) => {
     switch (action.type) {
       case 'RESERVE':
+        console.log("I'm in")
         return [...state];
       case 'CANCEL':
+        console.log("I'm in")
         return [...state];
       case 'READ':
+        console.log("I'm in")
         return [...state];
       default:
         return state;
@@ -34,12 +37,14 @@ export const reservePlace = (index) => ({
 
   export const getRockets = createAsyncThunk('READ',
   async () => {
-    const res = await axios.get(APIURL);
-    // const rockets = Object.keys(res.data).map((id) => ({
-    //   id: id,
-    //   ...res.data[id][0],
-    // }));
-    return res;
+    const res = await axios.get(ROCKETS_API_KEY);
+    const rockets = res.data.map((e) => ({
+       id: e.id,
+       name : e.rocket_name,
+       description : e.description,
+       image : e.flickr_images
+    }));
+    return rockets;
   });
 
   export default rocketsReducer;
