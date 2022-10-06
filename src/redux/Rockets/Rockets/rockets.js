@@ -20,15 +20,14 @@ export const reservePlace = (index) => ({
   const initialState = [];
 
   const rocketsReducer = (state = initialState, action) => {
+    console.log(action.type)
     switch (action.type) {
-      case 'RESERVE':
-        console.log("I'm in")
+      case 'RESERVE/fulfilled':
         return [...state];
-      case 'CANCEL':
-        console.log("I'm in")
+      case 'CANCEL/fulfilled':
         return [...state];
-      case 'READ':
-        console.log("I'm in")
+      case 'READ/fulfilled':
+      console.log(state)
         return [...state];
       default:
         return state;
