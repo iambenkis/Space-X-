@@ -10,17 +10,28 @@ const Rocket = () => {
     dispatch(getRockets());
   }, []);
   const rockets = rocketStore.map(r => r);
+  const newState = rockets.map(rocket => {
+      if(rocket.id !== 45)
+          return rocket;
+      return { ...rocket, reserved: true };
+  });
+  console.log(newState, "bb")
+
 return (
-  <>
-    <p>Rocket Page</p>
+  <div className='rockets'>
     {rockets.map(r =>
       r.map(m =>
-        <div>
-          <h2>{m.name}</h2>
+        <div className='rocket'>
+          <img src={m.image}/>
+          <div className='rocket-text'>
+            <h2>{m.name}</h2>
+            <p>{m.description}</p>
+            <button type='button' >RESERVE</button>
+          </div>
         </div>
     )
     )}
-  </>
+  </div>
 );
 }
 export default Rocket;
