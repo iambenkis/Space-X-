@@ -2,20 +2,20 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 const ROCKETS_API_KEY = 'https://api.spacexdata.com/v3/rockets';
 
-export const reservePlace = (index) => ({
+export const reservePlace = (rockets) => ({
     type: 'RESERVE',
-    payload: index,
-  });
+    payload: rockets,
+ });
 
-  export const cancelReservation = (book) => ({
+  export const cancelReservation = (rockets) => ({
     type: 'CANCEL',
-    payload: book,
+    payload: rockets,
   });
 
-  export const readRockets = (books) => ({
+  export const readRockets = (rockets) => ({
     type: 'READ',
-    payload: books,
-  });
+    payload: rockets,
+ });
 
   const initialState = [];
 
@@ -23,12 +23,11 @@ export const reservePlace = (index) => ({
     console.log(action.type)
     switch (action.type) {
       case 'RESERVE/fulfilled':
-        return [...state];
+        return [...state,action.payload];
       case 'CANCEL/fulfilled':
-        return [...state];
+        return [...state,action.payload];
       case 'READ/fulfilled':
-      console.log(state)
-        return [...state];
+        return [...state,action.payload];
       default:
         return state;
     }

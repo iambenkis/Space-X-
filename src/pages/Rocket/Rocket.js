@@ -4,15 +4,22 @@ import { useEffect } from 'react';
 import { getRockets } from '../../redux/Rockets/Rockets/rockets';
 
 const Rocket = () => {
-  const rockets = useSelector(state => state.rockets);
+  const rocketStore = useSelector(state => state.rockets);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getRockets());
   }, []);
-  console.log(rockets)
+  const rockets = rocketStore.map(r => r);
 return (
   <>
     <p>Rocket Page</p>
+    {rockets.map(r =>
+      r.map(m =>
+        <div>
+          <h2>{m.name}</h2>
+        </div>
+    )
+    )}
   </>
 );
 }
