@@ -41,3 +41,5 @@ export const reservePlace = (index) => ({
     // }));
     return res;
   });
+
+  export default rocketsReducer;
