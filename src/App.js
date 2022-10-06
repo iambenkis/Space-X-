@@ -8,8 +8,16 @@ import Rocket from './pages/Rocket/Rocket';
 import Mission from './pages/Mission/Mission';
 import Profile from './pages/Profile/Profile';
 import Header from './components/Header/Header';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getRockets } from './redux/Rockets/Rockets/rockets';
 
-const App = () => (
+const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getRockets());
+  }, [dispatch]);
+  return (
   <>
     <Header />
     <Routes>
@@ -19,6 +27,6 @@ const App = () => (
       <Route path="/profile" element={<Profile />} />
     </Routes>
   </>
-);
+)};
 
 export default App;

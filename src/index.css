@@ -59,7 +59,6 @@ body {
 }
 
 .rocket-text button {
-  background-color: #0290ff;
   color: #fff;
   border: none;
   padding: 1rem 1.7rem;
@@ -67,10 +66,21 @@ body {
   cursor: pointer;
 }
 
+.rocket-text .reserve{
+  background-color: #0290ff;
+}
+
+.rocket-text .cancel{
+  background-color: #7c7c7c;
+}
+
 .rocket-text button:hover {
   background-color: #0472c7;
 }
 
+.rocket-text .cancel:hover {
+  background-color: #c9c9c9;
+}
 .rocket img {
   width: 27rem;
   height: 20rem;

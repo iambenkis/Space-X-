@@ -4,7 +4,9 @@ const ROCKETS_API_KEY = 'https://api.spacexdata.com/v3/rockets';
 
 export const reservePlace = (rockets) => ({
     type: 'RESERVE',
-    payload: rockets,
+    payload: {
+      id : rockets.id,
+    },
  });
 
   export const cancelReservation = (rockets) => ({
@@ -20,14 +22,20 @@ export const reservePlace = (rockets) => ({
   const initialState = [];
 
   const rocketsReducer = (state = initialState, action) => {
-    console.log(action.type)
     switch (action.type) {
-      case 'RESERVE/fulfilled':
-        return [...state,action.payload];
+      case 'RESERVE':
+        const newState = state.map((each) => {
+          console.log(action.payload, state)
+          if (each.id === action.payload.id) {
+            each.reserved = !each.reserved;
+          }
+          return each;
+          });
+        return newState;
       case 'CANCEL/fulfilled':
         return [...state,action.payload];
       case 'READ/fulfilled':
-        return [...state,action.payload];
+        return action.payload;
       default:
         return state;
     }
@@ -40,7 +48,8 @@ export const reservePlace = (rockets) => ({
        id: e.id,
        name : e.rocket_name,
        description : e.description,
-       image : e.flickr_images
+       image : e.flickr_images,
+       reserved : false,
     }));
     return rockets;
   });
