@@ -31,3 +31,13 @@ export const reservePlace = (index) => ({
         return state;
     }
   };
+
+  export const getRockets = createAsyncThunk('READ',
+  async () => {
+    const res = await axios.get(APIURL);
+    // const rockets = Object.keys(res.data).map((id) => ({
+    //   id: id,
+    //   ...res.data[id][0],
+    // }));
+    return res;
+  });
