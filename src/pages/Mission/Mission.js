@@ -27,8 +27,8 @@ const Mission = () => {
     },
   ];
 
-  const missionHandler = (id, reserved) => {
-    dispatch(updateMission({ id, reserved }));
+  const missionHandler = (id, joined) => {
+    dispatch(updateMission({ id, joined }));
   };
 
   return (
@@ -50,15 +50,15 @@ const Mission = () => {
                 <td className="tableData">{mission.description}</td>
                 <td className="tableData">
                   {
-                    mission.reserved
+                    mission.joined
                       ? 'Active Member'
                       : 'Not A Member'
                   }
                 </td>
                 <td className="tableData">
-                  <button type="button" onClick={() => missionHandler(mission.mission_id, mission.reserved)}>
+                  <button type="button" onClick={() => missionHandler(mission.mission_id, mission.joined)}>
                     {
-                      mission.reserved
+                      mission.joined
                         ? 'Leave Mission'
                         : 'Join Mission'
                     }

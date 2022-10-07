@@ -27,7 +27,7 @@ const MissionSlice = createSlice({
         if (each.mission_id === action.payload.id) {
           return {
             ...each,
-            reserved: !action.payload.reserved,
+            joined: !action.payload.joined,
           };
         }
         return each;
@@ -42,7 +42,7 @@ const MissionSlice = createSlice({
       let { payload } = action;
       payload = payload.map((each) => ({
         ...each,
-        reserved: false,
+        joined: false,
       }));
       return {
         payload,
