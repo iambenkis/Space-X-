@@ -1,4 +1,4 @@
-# Space X
+# Space X (React Group Project)
 
 > It is designed to support the commercialization of space travel while providing a center for research and other alternative space-related programs. In this project we worked with the real live data from the SpaceX API. Web application provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
@@ -13,6 +13,13 @@
 ## Live Demo (if available)
 
 [coming soon... 🥚]()
+
+## Video Presentation
+
+<video width="320" height="240" controls>
+  <source src="https://drive.google.com/file/d/1OvcgvOwVF8OjLKD56DP0nb_wvVzStoxq/view?usp=sharing" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 
 ## Getting Started
@@ -42,10 +49,13 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Benjamin Kisenge**
 
 - GitHub: [@iambenkis](https://github.com/iambenkis)
 - Twitter: [@iambenkis](https://twitter.com/iambenkis)
+
+
+👤 **Aakash Verma**
 
 - GitHub: [@skyv26](https://github.com/skyv26)
 - Twitter: [@vrma_aakash](https://twitter.com/vrma_aakash)
