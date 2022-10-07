@@ -1,9 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
+import { updateMission } from '../../redux/Missions/MissionSlice';
 
 const Mission = () => {
   const state = useSelector((state) => state.missions);
+  const dispatch = useDispatch();
 
   const TableHeading = [
     {
@@ -23,6 +25,10 @@ const Mission = () => {
       id: nanoid(),
     },
   ];
+
+  const missionHandler = (id, reserved) => {
+    dispatch(updateMission({ id, reserved }));
+  };
 
   return (
     <>
@@ -49,7 +55,7 @@ const Mission = () => {
                   }
                 </td>
                 <td className="tableData">
-                  <button type="button">Join Missio</button>
+                  <button type="button" onClick={() => missionHandler(mission.mission_id, mission.reserved)}>Join Mission</button>
                 </td>
               </tr>
             ))
