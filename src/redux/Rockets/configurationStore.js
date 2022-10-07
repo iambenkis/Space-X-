@@ -1,6 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { combineReducers, createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import { combineReducers } from 'redux';
 import rocketsReducer from './Rockets/rockets';
 
 const rootStore = combineReducers({
@@ -8,7 +7,7 @@ const rootStore = combineReducers({
 });
 
 const store = configureStore({
-  reducer : rootStore,
+  reducer: rootStore,
 });
 
 export default store;
