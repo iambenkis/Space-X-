@@ -8,8 +8,14 @@ const Profile = () => {
   console.log(reservedRocket,"profile")
   return(
   <>
-    <p>Profile Page</p>
-
+    <h3>My Rockets</h3>
+    <ul>
+      {
+        reservedRocket.map(r =>
+          <li>{r.name}</li>
+        )
+      }
+    </ul>
   </>
 )};
 
