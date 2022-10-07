@@ -4,9 +4,21 @@ exports[`Test Profile component Does Profile renderer ?  1`] = `
 <div
   className="profile"
 >
-  <h3>
-    My Rockets
-  </h3>
-  <ul />
+  <div
+    className="rocket-profile"
+  >
+    <h3>
+      My Rockets
+    </h3>
+    <ul />
+  </div>
+  <div
+    className="mission-profile"
+  >
+    <h3>
+      My Missions
+    </h3>
+    <ul />
+  </div>
 </div>
 `;
