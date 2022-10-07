@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot testing 1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <a
+      className="logo"
+      href="/"
+    >
+      <img
+        alt="Space Traveler's Hub"
+        className="logo-image"
+        src="planet.png"
+      />
+      Space Traveler's Hub
+    </a>
+    <nav
+      className="nav"
+    >
+      <ul
+        className="unorderList"
+      >
+        <li
+          className="list"
+        >
+          <a
+            aria-current="page"
+            className="link active"
+            href="/rockets"
+            onClick={[Function]}
+          >
+            Rockets
+          </a>
+        </li>
+        <li
+          className="list"
+        >
+          <a
+            className="link "
+            href="/missions"
+            onClick={[Function]}
+          >
+            Missions
+          </a>
+        </li>
+        <li
+          className="list"
+        >
+          <a
+            className="link "
+            href="/profile"
+            onClick={[Function]}
+          >
+            Profile
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>,
+  <div
+    className="rockets"
+  />,
+]
+`;
