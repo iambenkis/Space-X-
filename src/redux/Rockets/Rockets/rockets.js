@@ -10,11 +10,6 @@ export const reservePlace = (rockets) => ({
   },
 });
 
-export const cancelReservation = (rockets) => ({
-  type: 'CANCEL',
-  payload: rockets,
-});
-
 export const readRockets = (rockets) => ({
   type: 'READ',
   payload: rockets,
@@ -25,14 +20,17 @@ const initialState = [];
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'RESERVE':
-      const newState = state.map((each) => {
-        console.log(action.payload, state);
-        if (each.id === action.payload.id) {
-          each.reserved = !each.reserved;
-        }
-        return each;
-      });
-      return newState;
+    { const newState = state.map((each) => {
+      if (each.id === action.payload.id) {
+        const data = {
+          ...each,
+          reserved: !each.reserved,
+        };
+        return data;
+      }
+      return each;
+    });
+    return newState; }
     case 'CANCEL/fulfilled':
       return [...state, action.payload];
     case 'READ/fulfilled':
@@ -54,7 +52,5 @@ export const getRockets = createAsyncThunk('READ',
     }));
     return rockets;
   });
-
-// export const reservedRocket =
 
 export default rocketsReducer;

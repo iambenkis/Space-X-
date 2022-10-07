@@ -9,8 +9,8 @@ const Rocket = () => {
   return (
     <div className="rockets">
       {rocketStore.map((m) => (
-        <div className="rocket">
-          <img src={m.image} />
+        <div className="rocket" key={m.id}>
+          <img src={m.image} alt="rocket-img" />
           <div className="rocket-text">
             <h2>{m.name}</h2>
             <p>

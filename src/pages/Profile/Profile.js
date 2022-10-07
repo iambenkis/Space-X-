@@ -11,7 +11,7 @@ const Profile = () => {
         <h3>My Rockets</h3>
         <ul>
           {
-          reservedRocket.map((r) => <li>{r.name}</li>)
+          reservedRocket.map((r) => <li key={r.id}>{r.name}</li>)
         }
         </ul>
       </div>
