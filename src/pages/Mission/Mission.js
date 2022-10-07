@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 import { updateMission } from '../../redux/Missions/MissionSlice';
+import './Mission.css';
 
 const Mission = () => {
   const state = useSelector((state) => state.missions);
@@ -55,7 +56,13 @@ const Mission = () => {
                   }
                 </td>
                 <td className="tableData">
-                  <button type="button" onClick={() => missionHandler(mission.mission_id, mission.reserved)}>Join Mission</button>
+                  <button type="button" onClick={() => missionHandler(mission.mission_id, mission.reserved)}>
+                    {
+                      mission.reserved
+                        ? 'Leave Mission'
+                        : 'Join Mission'
+                    }
+                  </button>
                 </td>
               </tr>
             ))
