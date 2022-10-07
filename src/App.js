@@ -8,7 +8,7 @@ import Rocket from './pages/Rocket/Rocket';
 import Mission from './pages/Mission/Mission';
 import Profile from './pages/Profile/Profile';
 import Header from './components/Header/Header';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getRockets } from './redux/Rockets/Rockets/rockets';
 
