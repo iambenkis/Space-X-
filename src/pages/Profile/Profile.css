@@ -1,0 +1,27 @@
+li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.profile {
+    font-size: 1.3rem;
+    margin: 1rem;
+}
+
+.profile h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.profile ul {
+    border: 1px solid #777;
+    border-bottom: none;
+    width: 30%;
+}
+
+.profile li {
+    font-size: 1.7rem;
+    border-bottom: 1px solid #777;
+    padding: 1rem;
+}
