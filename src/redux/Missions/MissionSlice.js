@@ -11,7 +11,7 @@ const MISSION_API = 'https://api.spacexdata.com/v3/missions';
 // Action Type for fetching missions
 const FETCH_MISSIONS = '/get/missions/all';
 
-// Redux Thunk For Handling API
+// Redux Thunk For Handling Mission API
 export const getMission = createAsyncThunk(FETCH_MISSIONS, async () => {
   const payload = await (await fetch(MISSION_API)).json();
   return payload;
