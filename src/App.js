@@ -10,12 +10,16 @@ import Mission from './pages/Mission/Mission';
 import Profile from './pages/Profile/Profile';
 import Header from './components/Header/Header';
 import { getRockets } from './redux/Rockets/Rockets/rockets';
+import { getMission } from './redux/Missions/MissionSlice';
 
 const App = () => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getRockets());
+    dispatch(getMission());
   }, [dispatch]);
+
   return (
     <>
       <Header />
