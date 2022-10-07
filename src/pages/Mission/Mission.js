@@ -46,17 +46,17 @@ const Mission = () => {
           {
             state.payload.map((mission) => (
               <tr key={mission.mission_id} className="tableRow">
-                <td className="tableData">{mission.mission_name}</td>
-                <td className="tableData">{mission.description}</td>
-                <td className="tableData">
+                <td className="tableData missionName">{mission.mission_name}</td>
+                <td className="tableData description">{mission.description}</td>
+                <td className="tableData label">
                   {
                     mission.joined
-                      ? 'Active Member'
-                      : 'Not A Member'
+                      ? <span className="activeMember">Active Member</span>
+                      : <span className="notAMember">Not A Member</span>
                   }
                 </td>
                 <td className="tableData">
-                  <button type="button" onClick={() => missionHandler(mission.mission_id, mission.joined)}>
+                  <button type="button" className={`missionButton ${mission.joined ? 'joined' : ''}`} onClick={() => missionHandler(mission.mission_id, mission.joined)}>
                     {
                       mission.joined
                         ? 'Leave Mission'
