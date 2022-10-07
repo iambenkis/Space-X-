@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Mission component  Does Mission match the snapshot ? 1`] = `
+<table
+  className="table"
+>
+  <thead
+    className="tableHeading"
+  >
+    <tr
+      className="tableRow"
+    >
+      <th
+        className="tableHeading"
+      >
+        Mission
+      </th>
+      <th
+        className="tableHeading"
+      >
+        Description
+      </th>
+      <th
+        className="tableHeading"
+      >
+        Status
+      </th>
+      <th
+        className="tableHeading"
+      />
+    </tr>
+  </thead>
+  <tbody
+    className="tableBody"
+  />
+</table>
+`;
+
+exports[`Test Mission component  Does Mission match the snapshot ? 2`] = `
+<table
+  className="table"
+>
+  <thead
+    className="tableHeading"
+  >
+    <tr
+      className="tableRow"
+    >
+      <th
+        className="tableHeading"
+      >
+        Mission
+      </th>
+      <th
+        className="tableHeading"
+      >
+        Description
+      </th>
+      <th
+        className="tableHeading"
+      >
+        Status
+      </th>
+      <th
+        className="tableHeading"
+      />
+    </tr>
+  </thead>
+  <tbody
+    className="tableBody"
+  />
+</table>
+`;
