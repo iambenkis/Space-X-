@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test Profile component Does Profile renderer ?  1`] = `
-Array [
+<div
+  className="profile"
+>
   <h3>
     My Rockets
-  </h3>,
-  <ul />,
-]
+  </h3>
+  <ul />
+</div>
 `;

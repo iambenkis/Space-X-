@@ -1,5 +1,4 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const ROCKETS_API_KEY = 'https://api.spacexdata.com/v3/rockets';
 
@@ -42,8 +41,8 @@ const rocketsReducer = (state = initialState, action) => {
 
 export const getRockets = createAsyncThunk('READ',
   async () => {
-    const res = await axios.get(ROCKETS_API_KEY);
-    const rockets = res.data.map((e) => ({
+    const res = await (await fetch(ROCKETS_API_KEY)).json();
+    const rockets = res.map((e) => ({
       id: e.id,
       name: e.rocket_name,
       description: e.description,
