@@ -1,18 +1,38 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-// import { nanoid } from '@reduxjs/toolkit';
+import { nanoid } from '@reduxjs/toolkit';
 
 const Mission = () => {
   const state = useSelector((state) => state.missions);
+
+  const TableHeading = [
+    {
+      heading: 'Mission',
+      id: nanoid(),
+    },
+    {
+      heading: 'Description',
+      id: nanoid(),
+    },
+    {
+      heading: 'Status',
+      id: nanoid(),
+    },
+    {
+      heading: '',
+      id: nanoid(),
+    },
+  ];
+
   return (
     <>
       <table className="table">
         <thead className="tableHeading">
           <tr className="tableRow">
-            <th className="tableHeading">Mission</th>
-            <th className="tableHeading">Description</th>
-            <th className="tableHeading">Status</th>
-            <th className="tableHeading">{' '}</th>
+            {
+              TableHeading.map((eachHeading) => (
+                <th className="tableHeading" key={eachHeading.id}>{eachHeading.heading}</th>))
+            }
           </tr>
         </thead>
         <tbody className="tableBody">
