@@ -1,56 +1,62 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Space X (React Group Project)
 
-# Project Name
-
-> Description the project.
+> It is designed to support the commercialization of space travel while providing a center for research and other alternative space-related programs. In this project we worked with the real live data from the SpaceX API. Web application provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Major languages: **JavaScript**
+- Library: **React.js**, **React-Redux**, **@reduxjs/toolkit**, **redux-logger**
+- Technologies used: **CSS3, JSX**
+- Testing Tool: **Jest**, **React-testing Library**
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[coming soon... 🥚]()
 
+## Video Presentation
+
+[Click Here](https://drive.google.com/file/d/1OvcgvOwVF8OjLKD56DP0nb_wvVzStoxq/view?usp=sharing)
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+> In order to work with this project. You need to have basic understanding of *React.js*.
+
 ### Setup
+
+- git clone `https://github.com/iambenkis/Space-X-.git`
 
 ### Install
 
+**In order to start the project properly please install the npm dependicies by using below command**
+
+- npm install
+
 ### Usage
 
-### Run tests
+**In order to run your project use below command**
 
-### Deployment
-
-
+- npm start
 
 ## Authors
 
-👤 **Author1**
+👤 **Benjamin Kisenge**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@iambenkis](https://github.com/iambenkis)
+- Twitter: [@iambenkis](https://twitter.com/iambenkis)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Aakash Verma**
+
+- GitHub: [@skyv26](https://github.com/skyv26)
+- Twitter: [@vrma_aakash](https://twitter.com/vrma_aakash)
+- LinkedIn: [dev.aakashv](https://linkedin.com/in/skyv2022)
+
 
 ## 🤝 Contributing
 
@@ -62,14 +68,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._

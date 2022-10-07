@@ -1,0 +1,36 @@
+li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+.profile {
+  font-size: 1.3rem;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.profile h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.rocket-profile,
+.mission-profile {
+  width: 50%;
+}
+
+.profile ul {
+  border: 1px solid #777;
+  border-bottom: none;
+  width: 100%;
+}
+
+.profile li {
+  font-size: 1.7rem;
+  border-bottom: 1px solid #777;
+  padding: 1rem;
+}
