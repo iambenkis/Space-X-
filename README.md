@@ -12,7 +12,7 @@
 
 ## Live Demo (if available)
 
-[coming soon... 🥚]()
+[Live demo](https://peaceful-empanada-525d25.netlify.app/)
 
 ## Video Presentation
 
