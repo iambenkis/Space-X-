@@ -1,43 +1,8 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';  
 
 const ROCKETS_API_KEY = 'https://api.spacexdata.com/v3/rockets';
 
-export const reservePlace = (rockets) => ({
-  type: 'RESERVE',
-  payload: {
-    id: rockets.id,
-  },
-});
-
-export const readRockets = (rockets) => ({
-  type: 'READ',
-  payload: rockets,
-});
-
 const initialState = [];
-
-const rocketsReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'RESERVE':
-    { const newState = state.map((each) => {
-      if (each.id === action.payload.id) {
-        const data = {
-          ...each,
-          reserved: !each.reserved,
-        };
-        return data;
-      }
-      return each;
-    });
-    return newState; }
-    case 'CANCEL/fulfilled':
-      return [...state, action.payload];
-    case 'READ/fulfilled':
-      return action.payload;
-    default:
-      return state;
-  }
-};
 
 export const getRockets = createAsyncThunk('READ',
   async () => {
@@ -50,6 +15,36 @@ export const getRockets = createAsyncThunk('READ',
       reserved: false,
     }));
     return rockets;
-  });
+});
 
-export default rocketsReducer;
+const rockectsSlice = createSlice({
+  initialState,
+  name: "rockets",
+  reducers : {
+    reservePlace : {
+      reducer : (draft, action) => {
+        draft.map((each) => {
+          if (each.id === action.payload.id) {
+            each.reserved = !each.reserved 
+          } 
+        });
+        return ;
+      },
+      prepare : (rockets) => {
+        return {
+          payload: {
+            id: rockets.id,
+          }
+        }
+      },
+    },
+  },
+  extraReducers : {
+    [getRockets.fulfilled] : (state, action) => {
+      return action.payload
+    }
+  }
+})
+
+export const { reservePlace } = rockectsSlice.actions;
+export default rockectsSlice.reducer;

@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, createAction } from '@reduxjs/toolkit';
 
 // Initial State
 const initialState = {
@@ -9,10 +9,10 @@ const initialState = {
 const MISSION_API = 'https://api.spacexdata.com/v3/missions';
 
 // Action Type for fetching missions
-const FETCH_MISSIONS = '/get/missions/all';
+const fetchMissions = createAction('/get/missions/all');
 
 // Redux Thunk For Handling Mission API
-export const getMission = createAsyncThunk(FETCH_MISSIONS, async () => {
+export const getMission = createAsyncThunk(fetchMissions.toString(), async () => {
   const payload = await (await fetch(MISSION_API)).json();
   return payload;
 });

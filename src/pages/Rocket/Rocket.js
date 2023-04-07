@@ -5,6 +5,7 @@ import './Rockets.css';
 
 const Rocket = () => {
   const rocketStore = useSelector((state) => state.rockets);
+  console.log(rocketStore, "rockects ")
   const dispatch = useDispatch();
   return (
     <div className="rockets">
