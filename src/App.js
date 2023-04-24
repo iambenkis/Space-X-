@@ -11,6 +11,7 @@ import Profile from './pages/Profile/Profile';
 import Header from './components/Header/Header';
 import { getRockets } from './redux/Rockets/Rockets/rockets';
 import { getMission } from './redux/Missions/MissionSlice';
+import Signup from './pages/Signup/signup';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const App = () => {
     <>
       <Header />
       <Routes>
+        <Route path='/signup' element={<Signup/>}/>
         <Route path="/rockets" element={<Rocket />} />
         <Route path="/" element={<Navigate replace to="/rockets" />} />
         <Route path="/missions" element={<Mission />} />
